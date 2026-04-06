@@ -41,6 +41,7 @@ builder.Services.AddAuthentication("Cookies")
 
             // Другие настройки
             //options.Cookie.Domain = "localhost";  // ← явно указываем домен
+            options.Cookie.Domain = builder.Configuration["CookieDomain"];
             options.ExpireTimeSpan = TimeSpan.FromHours(8);
             options.SlidingExpiration = true;
 
