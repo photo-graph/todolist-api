@@ -40,7 +40,7 @@ builder.Services.AddAuthentication("Cookies")
             options.Cookie.IsEssential = true;
 
             // Другие настройки
-            options.Cookie.Domain = "localhost";  // ← явно указываем домен
+            //options.Cookie.Domain = "localhost";  // ← явно указываем домен
             options.ExpireTimeSpan = TimeSpan.FromHours(8);
             options.SlidingExpiration = true;
 
